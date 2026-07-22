@@ -5,3 +5,5 @@
 同6 写内容进去，很好理解7 cat查看内容，很好理解比如cat day01. 
 md 8 cp复制 格式为cp 需要复制的文件，要加后缀 复制出的文件的格式和名称，比如cp day01.md day02.md
 9 mv 需要移动文件 文件夹/ 若没有斜杆则是改名，如mv day01.md texe1/ 10 删除文件，易于理解如rm day01.md
+pwd 打印当前工作目录 ls 列出内容 cd 切换目录 mkdir 新建目录 touch 新建空文件 echo 原样输入；>覆盖写入，>>追加 cat 查看文件，连接文件输出 cp 复制 cp day01.md day02.md[复制后的文件名] mv 移动文件 rm删除文件 rm -r删除目录-l = long 详细格式、-a = all 含隐藏文件、-r = recursive 递归、-f = force 强制 ls —— 看我站的地方
+ls 路径 —— 不挪窝，看别处 ls ..看上一个目录ls ../..看上上个目录
