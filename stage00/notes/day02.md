@@ -15,4 +15,5 @@
 - ctrl+n 新建文件 new【新建文件夹】用文件树上的new folder
 - ctrl+` 开关终端
 # markdown的优势
-纯文本，不过时
+- 纯文本，不过时
+- Git 能追踪 Markdown 每一行的变化，但 .docx 这种二进制文件它只能报一句 "Binary files differ"
