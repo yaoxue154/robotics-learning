@@ -28,3 +28,5 @@
 - git add .                           # 把所有修改加入暂存区
 - git commit -m "写清楚你改了什么"      # 提交
 - git push                            # 推送到 GitHub
+# 修改上一次git的标题
+git commit --amend -m "新标题"
