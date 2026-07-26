@@ -1,0 +1,7 @@
+first_number=float(input("the first number: "))
+second_number=float(input("the second number: "))
+print(first_number+second_number)
+print(first_number-second_number)
+print(first_number*second_number)
+print(first_number/second_number)
+print("18" + 1)
