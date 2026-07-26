@@ -17,3 +17,26 @@
 - 写好的代码脚本，就像写好的剧本，通过命令，可以让python程序按照脚本运行
 - 脚本里放的就是有顺序的指令
 - 脚本的目的是自动化，REPL就像鼠标键盘在资源管理器上的操作，是即兴的
+# 示例
+- 脚本
+``name="yaoxue" 
+
+age=18
+
+score=95.5
+
+print(type(name))
+
+print(type(age))
+
+print(type(score))  
+
+print(name,age,score)``
+- 运行效果
+<class 'str'>
+
+<class 'int'>
+
+<class 'float'>
+
+yaoxue 18 95.5
