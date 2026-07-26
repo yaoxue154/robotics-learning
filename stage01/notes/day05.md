@@ -19,7 +19,8 @@
 - 脚本的目的是自动化，REPL就像鼠标键盘在资源管理器上的操作，是即兴的
 # 示例
 - 脚本
-``name="yaoxue" 
+```
+name="yaoxue" 
 
 age=18
 
@@ -31,8 +32,10 @@ print(type(age))
 
 print(type(score))  
 
-print(name,age,score)``
+print(name,age,score)
+```
 - 运行效果
+```
 <class 'str'>
 
 <class 'int'>
@@ -40,3 +43,4 @@ print(name,age,score)``
 <class 'float'>
 
 yaoxue 18 95.5
+```
