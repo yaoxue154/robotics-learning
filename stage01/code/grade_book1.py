@@ -5,6 +5,7 @@ while True:
         break
     elif name=="":
         print("姓名不能为空")
+        continue
     found=False
     for student in students:
         if student['name']==name:
