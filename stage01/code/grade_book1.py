@@ -5,9 +5,10 @@ while True:
         break
     elif name=="":
         print("姓名不能为空")
-    elif name not in (student['name'] for student in students):
-        print("学生不存在")
-    else:
-        for student in students:
-            if student['name']==name:
-                print(f"{student['name']}:{student['grade']}")
+    found=False
+    for student in students:
+        if student['name']==name:
+            found=True
+            print(f"学生姓名: {student['name']}, 学生成绩: {student['grade']}")
+    if not found:
+         print("学生不存在") 
