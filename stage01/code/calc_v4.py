@@ -15,8 +15,8 @@ while True:
     result = None
     operation = input("请输入操作符 (+, -, *, /) 或 'q' 退出: ")
     if operation== "q":
-            print("退出计算器。")
-            break
+        print("退出计算器。")
+        break
     elif operation not in ["+", "-", "*", "/"]:
         print("无效的操作符，请输入 +, -, *, / 或 'q' 退出。")
         continue
@@ -33,7 +33,10 @@ while True:
         success_service=True
     elif operation == "/":
         result = divide(a, b)
-        success_service=True
+        if result is not None:
+            success_service=True
+        elif result is None:
+            print("除数为零，无法计算结果。")
     else:
         print("Invalid operation.")
     if success_service==True:
