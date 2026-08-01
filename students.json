@@ -1,50 +1,22 @@
 [
     {
         "name": "Alice",
-        "grade": [
-            85,
-            90,
-            78
-        ]
+        "grade": 85
     },
     {
         "name": "Bob",
-        "grade": [
-            92,
-            88,
-            95
-        ]
+        "grade": 90
     },
     {
         "name": "Charlie",
-        "grade": [
-            70,
-            75,
-            80
-        ]
+        "grade": 78
     },
     {
-        "name": "gcc22",
-        "grade": [
-            100.0
-        ]
+        "name": "David",
+        "grade": 92
     },
     {
-        "name": "gcc22",
-        "grade": [
-            122.0
-        ]
-    },
-    {
-        "name": "gcc22",
-        "grade": [
-            1111.0
-        ]
-    },
-    {
-        "name": "cxy",
-        "grade": [
-            0.0
-        ]
+        "name": "Eve",
+        "grade": 88
     }
 ]

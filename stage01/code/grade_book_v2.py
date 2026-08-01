@@ -4,6 +4,11 @@ try:
         grade_book = json.load(f)
 except FileNotFoundError:
     grade_book = []
+def find(name):
+        for student in grade_book:
+            if student["name"] == name:                 
+                return student["grade"]
+        return None
 while True:
     print("Grade Book Menu:")
     print("1. view the all students")
@@ -11,11 +16,6 @@ while True:
     print("3. View Students")
     print("4. Save and Exit")
     choice = input("Enter your choice (1-4): ")
-    def find(name):
-        for student in grade_book:
-            if student["name"] == name:                 
-                return student["grade"]
-        return None
     if choice not in ["1", "2", "3", "4"]:
         print("Invalid choice. Please enter a number between 1 and 4.")
         continue
@@ -26,7 +26,7 @@ while True:
         name = (input("add student name: "))
         grade =(input("add student grade: "))
         try:
-            grade_book.append({"name": name, "grade": [float(grade)]})
+            grade_book.append({"name": name, "grade": float(grade)})
         except ValueError:
             print(f"Error occurred while adding student")
     elif choice == "3":
