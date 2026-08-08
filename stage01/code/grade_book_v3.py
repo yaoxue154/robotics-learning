@@ -7,28 +7,35 @@ class Student:
         return self.grade>=60
 class GradeBook:
     def __init__(self):
+        self.grade_book=[]
         try:
-            with open("students.json","r") as f:
-                self.grade_book=json.load(f)
+            with open("students.json","r",encoding="utf-8") as f:
+                data=json.load(f)
         except FileNotFoundError:
-            self.grade_book=[]
+            data=[]
+        for d in data:
+            stu=Student(d["name"],d["grade"])
+            self.grade_book.append(stu)
     def save_and_exit(self):
-        with open("students.json","w") as f:
-            json.dump(self.grade_book,f,indent=4)
+        data=[]
+        for stu in self.grade_book:
+            data.append({"name":stu.name,"grade":stu.grade})
+        with open("students.json","w",encoding="utf-8") as f:
+            json.dump(data,f,indent=4)
     def add_student(self,name,grade):
-        try:
-            self.grade_book.append({"name":name,"grade":float(grade)})
-        except ValueError:
-            print(f"error occurred while adding student")
+            stu=Student(name,grade)
+            self.grade_book.append(stu)
     def find(self,name):
         for student in self.grade_book:
-            if student["name"]==name:
-                return student["grade"]
+            if student.name==name:
+                return student
         return None
     def show_all_students(self):
-        for student in self.grade_book:
-            print(f"name:{student['name']},grade:{student['grade']}")
-
+        for stu in self.grade_book:
+            if stu.is_pass():
+                 print(f"name:{stu.name},grade:{stu.grade},status:pass")
+            else:
+                 print(f"name:{stu.name},grade:{stu.grade},status:fail")
 
 grade_system=GradeBook()
 while True:
@@ -45,17 +52,17 @@ while True:
         grade_system.show_all_students()
     elif choice=="2":
         try:
-            student_added=Student(input("add student name:"),float(input("add student grade:")))
-            grade_system.add_student(student_added.name,student_added.grade)
+            name=input("enter student name:")
+            grade=float(input("enter student grade:"))
+            grade_system.add_student(name,grade)
         except ValueError:
             print("invalid grade.please enter a valid number.")
     elif choice=="3":
-        student_found=Student(input("enter student name:"),0)
-        student_found.grade=grade_system.find(student_found.name)
+        student_found=grade_system.find(input("enter student name:"))
         if student_found is not None:
             print(f"name:{student_found.name},grade:{student_found.grade}")
         else:
-            print(f"student {student_found.name} not found.")
+            print(f"student not found.")
     elif choice=="4":
         grade_system.save_and_exit()
         print("grade book saved.exiting.")
