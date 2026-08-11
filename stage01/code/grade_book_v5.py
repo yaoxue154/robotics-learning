@@ -47,10 +47,13 @@ class GradeBook:
             if choice1=="y":
                 self.grade_book.remove(student)
                 print("deleted!")
-                grade_system.log("DELETE",name)
+                self.log("DELETE",name)
             else:
                 print("cancelde!")
     def show_stats(self):
+        if not self.grade_book:
+            print("暂无数据")
+            return
         grade=[]
         for stu in self.grade_book:
             grade.append(stu.grade)
@@ -58,21 +61,19 @@ class GradeBook:
         for s in self.grade_book:
             if s.is_pass():
                 passed_student=passed_student+1            
-        try:
-            headcount=len(self.grade_book)
-            total_grade=sum(grade)
-            best=max(self.grade_book,key=lambda s:s.grade)
-            lowest=min(self.grade_book,key=lambda s:s.grade)
-            print(f"headcount:")
-            print(f"averagr headcount:{total_grade/headcount}")
-            print(f"best student is {best.name},grade:{best.grade}")
-            print(f"lowest grade:{lowest.grade}")  # 保护学生自尊心，不披露名字
-            print(f"pass rate:{passed_student/headcount}")
-        except ZeroDivisionError:
-            print("wrong data")
+        headcount=len(self.grade_book)
+        total_grade=sum(grade)
+        best=max(self.grade_book,key=lambda s:s.grade)
+        lowest=min(self.grade_book,key=lambda s:s.grade)
+        print(f"headcount:{headcount}")
+        print(f"averagr grade:{total_grade/headcount}")
+        print(f"best student is {best.name},grade:{best.grade}")
+        print(f"lowest grade:{lowest.grade}")  # 保护学生自尊心，不披露名字
+        print(f"pass rate:{passed_student/headcount}")
+
     def log(self,action,detail):
-        with open("scratch/robot.log","a",encoding="utf-8") as f:
-                        f.write(f"{datetime.now().strftime('%Y-%m-%d')}|{action}|{detail}\n")
+        with open("scratch/grade_book.log","a",encoding="utf-8") as f:
+                        f.write(f"{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}|{action}|{detail}\n")
 
 grade_system=GradeBook()
 while True:
