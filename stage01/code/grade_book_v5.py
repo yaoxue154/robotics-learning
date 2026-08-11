@@ -47,6 +47,7 @@ class GradeBook:
             if choice1=="y":
                 self.grade_book.remove(student)
                 print("deleted!")
+                grade_system.log("DELETE",name)
             else:
                 print("cancelde!")
     def show_stats(self):
@@ -95,7 +96,7 @@ while True:
             grade_system.add_student(name,grade)            
             grade_system.log("ADD",f"({name}:{grade})")
         except ValueError:
-            print("invalid grade.please enter a valid number.")
+            print("invalid grade,please enter a valid number.")
     elif choice=="3":
         student_found=grade_system.find(input("enter student name:"))
         if student_found is not None:
@@ -110,7 +111,6 @@ while True:
     elif choice=="5":
         name=input("enter the student name:")
         grade_system.remove_student(name)
-        grade_system.log("DELETE",name)
     elif choice=="6":
         grade_system.show_stats()
         
