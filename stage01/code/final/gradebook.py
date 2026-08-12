@@ -1,16 +1,16 @@
 import json
 from datetime import datetime
-class Student:
-    def __init__(self,name,grade):
-        self.name=name
-        self.grade=grade
-    def is_pass(self):
-        return self.grade>=60
+from student import(Student)
+import os
+BASE_DIR=os.path.dirname(os.path.abspath(__file__))
+DATA_FILE=os.path.join(BASE_DIR,"students.json")
+LOG_FILE=os.path.join(BASE_DIR,"grade_book.log")
+
 class GradeBook:
     def __init__(self):
         self.grade_book=[]
         try:
-            with open("students.json","r",encoding="utf-8") as f:
+            with open(DATA_FILE,"r",encoding="utf-8") as f:
                 data=json.load(f)
         except FileNotFoundError:
             data=[]
@@ -21,11 +21,14 @@ class GradeBook:
         data=[]
         for stu in self.grade_book:
             data.append({"name":stu.name,"grade":stu.grade})
-        with open("students.json","w",encoding="utf-8") as f:
+        with open(DATA_FILE,"w",encoding="utf-8") as f:
             json.dump(data,f,indent=4)
     def add_student(self,name,grade):
-            stu=Student(name,grade)
-            self.grade_book.append(stu)
+            if self.find(name)==None:     
+                stu=Student(name,grade)
+                self.grade_book.append(stu)
+            else:
+                 print("the student had existed,please delete him final.")
     def find(self,name):
         for student in self.grade_book:
             if student.name==name:
@@ -72,47 +75,7 @@ class GradeBook:
         print(f"pass rate:{passed_student/headcount}")
 
     def log(self,action,detail):
-        with open("scratch/grade_book.log","a",encoding="utf-8") as f:
-                        f.write(f"{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}|{action}|{detail}\n")
+        with open(LOG_FILE,"a",encoding="utf-8") as f:
+                        f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}|{action}|{detail}\n")
 
-grade_system=GradeBook()
-while True:
-    print("grade book menu:")
-    print("1.view all students")
-    print("2.add student")
-    print("3.find student")
-    print("4.save and exit")
-    print("5.delete student")
-    print("6.show stats")
-    choice=input("enter your choice(1-6):")
-    if choice not in ["1","2","3","4","5","6"]:
-        print("invalid choice.please enter a number between 1 and 6.")
-        continue
-    elif choice=="1":
-        grade_system.show_all_students()
-    elif choice=="2":
-        try:
-            name=input("enter student name:")
-            grade=float(input("enter student grade:"))
-            grade_system.add_student(name,grade)            
-            grade_system.log("ADD",f"({name}:{grade})")
-        except ValueError:
-            print("invalid grade,please enter a valid number.")
-    elif choice=="3":
-        student_found=grade_system.find(input("enter student name:"))
-        if student_found is not None:
-            print(f"name:{student_found.name},grade:{student_found.grade}")
-        else:
-            print(f"student not found.")
-    elif choice=="4":
-        grade_system.save_and_exit()   
-        print("grade book saved.exiting.")
-        grade_system.log("SAVE",f"total headcount:{len(grade_system.grade_book)}")
-        break
-    elif choice=="5":
-        name=input("enter the student name:")
-        grade_system.remove_student(name)
-    elif choice=="6":
-        grade_system.show_stats()
-        
-    
+       

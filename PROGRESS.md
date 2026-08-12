@@ -9,7 +9,9 @@
   - 成果：`stage01/code/grade_book_v2.py`（菜单+JSON 持久化+异常处理），数据文件 `students.json` 已用 .gitignore 隔离（`git rm --cached` 除名）
   - 概念掌握：.gitignore 只拦未跟踪文件；`git ls-files` 查跟踪状态
 - 已完成：第 1 课 变量 / 第 2 课 运算与输入 / 第 3 课 条件 / 第 4 课 循环 / 第 5 课 列表与字典 / 第 6 课 函数 / 第 7 课 文件读写与异常
-- 下次课：第 9 课（常用标准库，可并入结业项目）→ 阶段 1 结业项目+考核
+- 进度：结业项目一期 **已通过**（2026-08-11，`grade_book_v5.py` 六项菜单+统计+日志；v4 为翻车存档留作对照）
+  - 待办：二期拆模块（student.py / gradebook.py / main.py，`from X import Y` 自己的模块）→ 阶段 1 结业笔试
+- 第 9 课《常用标准库》已教（math/random/datetime/strftime）；学员自创学习日志工具 scratch/data_load.py
 - 进度：第 8 课《面向对象》**已验收**（2026-08-02，v3.1 通过：对象入列表、find 返回对象修复 None 死检查、答辩 3/3）
   - 成果：`stage01/code/grade_book_v3.py`（Student + GradeBook 两类，JSON 进出口翻译循环）
   - 待办：下次开场口试——**默写翻译一/翻译二两个循环**（空页面）
