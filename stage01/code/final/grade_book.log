@@ -14,3 +14,13 @@
 2026-08-13-00-02-26|DELETE|Amy
 2026-08-13-00-02-27|SAVE|total headcount:6
 2026-08-13 00:03:19|SAVE|total headcount:6
+2026-08-13 00:27:33|ADD|Bob:50.0
+2026-08-13 00:27:33|SAVE|total headcount:6
+2026-08-13 00:27:33|SAVE|total headcount:6
+2026-08-13 00:34:48|SAVE|total headcount:6
+2026-08-13 00:35:03|ADD|Jim:67.0
+2026-08-13 00:35:06|SAVE|total headcount:7
+2026-08-13 00:35:48|ADD|TempZz:66.0
+2026-08-13 00:35:48|SAVE|total headcount:8
+2026-08-13 00:36:26|DELETE|TempZz
+2026-08-13 00:36:26|SAVE|total headcount:7

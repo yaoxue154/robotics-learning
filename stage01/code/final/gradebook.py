@@ -27,6 +27,7 @@ class GradeBook:
             if self.find(name)==None:     
                 stu=Student(name,grade)
                 self.grade_book.append(stu)
+                self.log("ADD", f"{name}:{grade}")
             else:
                  print("the student had existed,please delete him final.")
     def find(self,name):

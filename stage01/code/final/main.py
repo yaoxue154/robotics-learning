@@ -19,7 +19,6 @@ while True:
             name=input("enter student name:")
             grade=float(input("enter student grade:"))
             grade_system.add_student(name,grade)            
-            grade_system.log("ADD",f"{name}:{grade}")
         except ValueError:
             print("invalid grade,please enter a valid number.")
     elif choice=="3":
