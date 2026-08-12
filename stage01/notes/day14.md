@@ -23,5 +23,6 @@ DATA_FILE = os.path.join(BASE_DIR, "students.json")
 # DATA_FILE 的内容就是一行文本：
 # "F:\Vibecoding project\item2 learning\stage01\code\final\students.json"
 ```
-
+## 小tip
+- ==None写成is None是规范写法，虽然前者也可以用
 
