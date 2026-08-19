@@ -26,3 +26,7 @@ DATA_FILE = os.path.join(BASE_DIR, "students.json")
 ## 小tip
 - ==None写成is None是规范写法，虽然前者也可以用
 
+# 考核遗忘点
+- while三要素：①初始化（设起点）②条件（设终点）③更新（迈步）
+- 10 // 3 ——答案 3取商，%取余
+- traceback 先看最后一行（错误类型+一句话），再往上找第一个你自己文件的行号
