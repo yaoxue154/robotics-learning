@@ -80,3 +80,4 @@ class Motor:
 - 能逐行讲清 `__init__` 和 `self`
 - 对象→字典的转换代码是亲手所写，能讲清
 - commit message 如实概括
+

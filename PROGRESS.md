@@ -4,22 +4,10 @@
 
 ## 当前锚点
 
-- 阶段：1 · Python 与编程思维
-- 进度：第 7 课《文件读写与异常——程序的记忆》**已验收**（2026-08-01）
-  - 成果：`stage01/code/grade_book_v2.py`（菜单+JSON 持久化+异常处理），数据文件 `students.json` 已用 .gitignore 隔离（`git rm --cached` 除名）
-  - 概念掌握：.gitignore 只拦未跟踪文件；`git ls-files` 查跟踪状态
-- 已完成：第 1 课 变量 / 第 2 课 运算与输入 / 第 3 课 条件 / 第 4 课 循环 / 第 5 课 列表与字典 / 第 6 课 函数 / 第 7 课 文件读写与异常
-- 阶段：1 · Python 与编程思维 —— **已结业**（2026-08-13）
-  - 结业笔试：口试 6.5/8 通过；实操《猜数字》补考通过（初考未过，修复 6 项 bug 后全绿）
-  - 回炉点已清：地板除、while 三要素、traceback 口诀
-  - 遗留思考（口述即可）：best.json 目前逐局追加，"破纪录才恭喜"的判断该怎么加
-- 下次课：**阶段 2 · 数学与科学计算** 开锣——先做数学小测诊断，再定 NumPy 节奏
-- 阶段 1 资产：`stage01/code/final/`（三模块成绩管理系统）、`scratch/exam_guess.py`、自建学习日志器 `scratch/data_load.py`
-- 进度：第 8 课《面向对象》**已验收**（2026-08-02，v3.1 通过：对象入列表、find 返回对象修复 None 死检查、答辩 3/3）
-  - 成果：`stage01/code/grade_book_v3.py`（Student + GradeBook 两类，JSON 进出口翻译循环）
-  - 待办：下次开场口试——**默写翻译一/翻译二两个循环**（空页面）
-  - 学员反馈：OOP 初感"复杂且没必要"——诊断为半吊子重构（壳换芯没换），全量重构后解决
-- 备注：温和节奏，标准不变；GitHub 用户 yaoxue154（仓库：robotics-learning、stage0-exam）；笔记编号约定：dayXX=第X个学习日（学员方案），一日可含多课，课与课之间用一级标题分隔；跑中文脚本用 `python -X utf8`
+- 阶段：1 **已结业**（2026-08-13：口试 6.5/8 + 实操《猜数字》补考通过；回炉点已清：地板除/while三要素/traceback口诀）
+- 当前：**阶段 2 · 数学与科学计算** 开锣——开场数学小测诊断 → NumPy
+- 阶段 1 资产：`stage01/code/final/`（三模块成绩管理系统）、`scratch/exam_guess.py`、`scratch/data_load.py`（自建学习日志器）
+- 备注：温和节奏标准不变；GitHub 用户 yaoxue154（仓库：robotics-learning、stage0-exam）；笔记编号 dayXX=第X个学习日（一日可含多课，一级标题分隔）；跑中文脚本用 `python -X utf8`；演示代码结构化排版直接发对话（SYLLABUS 教学约定）；commit 先验收后；位置感（CWD）已基本治愈；commit message 粘贴事故再犯过一次（750ebb2，留作警示）
 ## 学习日志
 
 （学员填写，格式：日期 | 学了什么 | 卡壳点）
