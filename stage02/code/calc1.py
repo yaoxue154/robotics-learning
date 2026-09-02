@@ -12,4 +12,3 @@ plt.plot(t[1:],vel_back,label="velocity_back")
 
 plt.legend()
 plt.show()
-
