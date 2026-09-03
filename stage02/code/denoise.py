@@ -27,7 +27,7 @@ for i in range(5,len(readings)-5):
 plt.plot(t[0:6],readings[0:6],'o',label='unseen')
 plt.plot(t[-5:],readings[-5:],'o',label='unseen')
 plt.plot(t[5:-5],fliters,'r',label='flitered')
-plt.plot(t,noise,'g',label='original_noise_data',marker='o')
+plt.plot(t,readings,'g',label='original_noise_data',marker='o')
 plt.plot(t,truth,'k',label='truth')
 plt.legend()
 plt.show()
