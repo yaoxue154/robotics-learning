@@ -10,7 +10,7 @@ plt.show()
 ```
 - hist直方图，bins————柱子数
 - plot曲线图，marker————拐点形状
-- quiver箭头图，（原点x，原点y，终点x，终点y）
+- quiver箭头图，（原点x，原点y，增量x，增量y）
 - 示例：
 ```
 heads_per_group=np.sum(coins,axis=1)

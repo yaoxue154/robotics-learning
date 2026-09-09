@@ -4,10 +4,13 @@
 
 ## 当前锚点
 
-- 阶段：1 **已结业**（2026-08-13：口试 6.5/8 + 实操《猜数字》补考通过；回炉点已清：地板除/while三要素/traceback口诀）
-- 当前：**阶段 2 · 数学与科学计算** 开锣——开场数学小测诊断 → NumPy
+- 阶段：1 **已结业**（2026-08-13：口试 6.5/8 + 实操《猜数字》补考通过）
+- 阶段：2 **已结业**（2026-09-09：口试 5.8/6 + 实操《旋转三角形》通过；NumPy/矩阵变换/微积分直觉/概率基础/手写矩阵乘法/可视化报告）
+- 当前：**阶段 3 · C 语言与嵌入式**——理论先行（9.9–9.12：C 语法/编译概念/指针/内存），9.13 给硬件采购清单，开学后（9.14 起）上开发板实战
+- 新机器注意：`python` 是商店诱饵 stub，一律用 `py`（3.14.3）；`py -X utf8`；matplotlib 已在新机装过
+- 阶段 2 资产：`stage02/code/`（np1/np2/plt1/calc1/prob1/denoise/my_matmul/exam_traingal）
 - 阶段 1 资产：`stage01/code/final/`（三模块成绩管理系统）、`scratch/exam_guess.py`、`scratch/data_load.py`（自建学习日志器）
-- 备注：温和节奏标准不变；GitHub 用户 yaoxue154（仓库：robotics-learning、stage0-exam）；笔记编号 dayXX=第X个学习日（一日可含多课，一级标题分隔）；跑中文脚本用 `python -X utf8`；演示代码结构化排版直接发对话（SYLLABUS 教学约定）；commit 先验收后；位置感（CWD）已基本治愈；commit message 粘贴事故再犯过一次（750ebb2，留作警示）
+- 备注：温和节奏标准不变；GitHub 用户 yaoxue154（仓库：robotics-learning、stage0-exam）；笔记编号 dayXX=第X个学习日（一日可含多课，一级标题分隔）；演示代码结构化排版直接发对话、括号密集处加空格（SYLLABUS 教学约定）；commit 本地随时做、验收后统一 push，验收必查 ahead；位置感（CWD）已基本治愈；commit message 粘贴事故再犯过一次（750ebb2，留作警示）
 ## 学习日志
 
 （学员填写，格式：日期 | 学了什么 | 卡壳点）
