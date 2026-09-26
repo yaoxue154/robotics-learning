@@ -25,7 +25,8 @@
 2. **Python 3.14**（勾选 Add to PATH；认准用 `py` 启动器——`python` 命令可能是微软商店诱饵 stub，踩过一次）
 3. **VS Code**
 4. **Kimi Code CLI**
-5. 第三方库：`py -m pip install numpy matplotlib`（装不上先换源/回官方源）
+5. **gcc**（阶段 3 起需要）：[repo.msys2.org/distrib/x86_64/](https://repo.msys2.org/distrib/x86_64/) 下最新 MSYS2 安装器 → 默认装到 `C:\msys64` → MSYS2 终端里 `pacman -S mingw-w64-ucrt-x86_64-gcc` → 用户 Path 加 `C:\msys64\ucrt64\bin` → 开新终端 `gcc --version` 验证。**注意：若用户名含中文/全角字符，须把用户级 TMP/TEMP 改为 `C:\msys64\tmp`，否则 gcc 罢工**
+6. 第三方库：`py -m pip install numpy matplotlib`（装不上先换源/回官方源）
 
 ## 四、恢复后验收清单（新机器第一课先跑这个）
 
