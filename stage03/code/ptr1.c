@@ -6,5 +6,10 @@ int main(void)
 
     printf("%p\n",p);
     printf("%d\n",*p);
+
+    *p=20;
+    printf("%d\n",age);
+    age=300;
+    printf("%d\n",age);
     return 0;
 }

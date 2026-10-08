@@ -8,4 +8,4 @@ int main(void)
     printf(" int 户型大小%d字节\n",sizeof(int));
     printf(" age 户型大小%d字节\n",sizeof(&age));
     return 0;
-}
+}                                                                                
