@@ -33,3 +33,6 @@ age=18
 int住在000000984C9FF6FC
 int 户型大小 4 字节
 门牌号 门牌号大小8 字节 
+# 启动程序
+gcc hello.c -o hello.exe（.exe可以省略）
+./hello.exe(.exe可以省略)
