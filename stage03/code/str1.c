@@ -14,6 +14,7 @@ int main(void)
         printf("%c\n",name[i]);
         i=i+1;
     }
-    printf("'\0'is the end of string,%d\n",i);
+    printf("'\\0'is the end of string,%d\n",i);
+    gg();
     return 0;
 }
